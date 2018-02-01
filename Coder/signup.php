@@ -29,7 +29,7 @@
 
         <button type="submit" name="submit" class="submit">Signup</button>
 	    <p>or</p>
-	    <a class="ref" href="index.php">Back to Login Page</a>
+	    <a href="index.php">Back to Login Page</a>
 
     </form>
 
@@ -50,7 +50,7 @@
            $sql1 = "SELECT MAX(ID) AS max FROM users";
 	   $result1 = sqlsrv_query($conn, $sql1);
 	   while ($row = sqlsrv_fetch_array($result1, SQLSRV_FETCH_ASSOC)) {
-		 echo ($row['max'] . " " . PHP_EOL);
+// 		 echo ($row['max'] . " " . PHP_EOL);
 		   $id = $row['max'];
 	   }
 		  
@@ -61,7 +61,7 @@
           echo (sqlsrv_errors());
           
           while ($row = sqlsrv_fetch_array($result2, SQLSRV_FETCH_ASSOC)) {
-           echo ($row['level1'] . " " . $row['ID'] . PHP_EOL);
+//            echo ($row['level1'] . " " . $row['ID'] . PHP_EOL);
           }
           sqlsrv_free_stmt($result2);
      
