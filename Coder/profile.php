@@ -30,17 +30,21 @@
       document.getElementById('uid').innerHTML = a;
     </script>   -->
 	<?php
-	  $sql = "SELECT * FROM users WHERE ID = "?><p id='uid'>1</p><?php" ";
-          $result = sqlsrv_query($conn, $sql);
-          if ($result == FALSE)
-          echo (sqlsrv_errors());
+		$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		echo $url; // Outputs: Full URL
+// 	$url=parse_url("http://domain.com/site/gallery/1#photo45 ");
+// 	echo $url["fragment"];
+// 	  $sql = "SELECT * FROM users WHERE ID = ".$_POST["uname"]." ";
+//           $result = sqlsrv_query($conn, $sql);
+//           if ($result == FALSE)
+//           echo (sqlsrv_errors());
 		  
-          while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-           echo ($row['username'] . PHP_EOL);
+//           while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
+//            echo ($row['username'] . PHP_EOL);
 		
-          }
+//           }
 	  
-          sqlsrv_free_stmt($result);
+//           sqlsrv_free_stmt($result);
     
 	 ?>
 
