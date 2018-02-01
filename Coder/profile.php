@@ -32,6 +32,8 @@
 	<?php
 		$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		echo $url; // Outputs: Full URL
+		if( strpos( $url, "#" ) === false ) echo "NO HASH !";
+   		else echo "HASH IS: #".explode( "#", $url )[1]; 
 // 	$url=parse_url("http://domain.com/site/gallery/1#photo45 ");
 // 	echo $url["fragment"];
 // 	  $sql = "SELECT * FROM users WHERE ID = ".$_POST["uname"]." ";
