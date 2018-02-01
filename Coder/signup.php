@@ -45,6 +45,25 @@
            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
           }
           sqlsrv_free_stmt($result);
+		  
+		  
+           $sql1 = "SELECT MAX(ID) FROM users";
+	   $result1 = sqlsrv_query($conn, $sql1);
+	   while ($row = sqlsrv_fetch_array($result1, SQLSRV_FETCH_ASSOC)) {
+		 echo ($row['ID'] . " " . PHP_EOL);
+		   $id = $row['ID'];
+	   }
+		  
+		  
+	  $sql2 = "INSERT INTO levels (level1, level2, ID) VALUES ('false','false','".$id."')";
+          $result2 = sqlsrv_query($conn, $sql2);
+          if ($result2 == FALSE)
+          echo (sqlsrv_errors());
+          
+          while ($row = sqlsrv_fetch_array($result2, SQLSRV_FETCH_ASSOC)) {
+           echo ($row['level1'] . " " . $row['ID'] . PHP_EOL);
+          }
+          sqlsrv_free_stmt($result2);
      
         }
 	    ?>
