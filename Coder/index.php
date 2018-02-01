@@ -46,7 +46,7 @@
 //            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
 		if ($row > 0)
 		{
-		$sub = $row['username'];
+		$sub = $row['ID'];
 		header('Location: profile.php#'.$sub.'');
 		exit;
 		}
