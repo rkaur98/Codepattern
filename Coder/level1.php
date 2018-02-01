@@ -147,7 +147,7 @@ REQUIRED to write at end : result.innerHTML = y;
 			  echo (sqlsrv_errors());
 
 			  while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-		//            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
+		           echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
 				
 			  }
 
