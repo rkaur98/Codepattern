@@ -140,7 +140,7 @@ REQUIRED to write at end : result.innerHTML = y;
 	 
 		if(isset($_POST['submit']))
 		      {
-			echo(.$_GET["uid"]);
+			
 			$sql = "UPDATE levels SET level1 = 'true' WHERE ID = ".$_GET["uid"]." ";
 			  $result = sqlsrv_query($conn, $sql);
 			  if ($result == FALSE)
