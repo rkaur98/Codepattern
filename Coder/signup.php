@@ -21,13 +21,13 @@
 	</header>
     
 	<main class="index">
-  <h3>Sign up</h3>
+  
     <form action="" method="post">
-
+        <h3>Sign up</h3>
         <input type="text" name="uname" required>
         <input type="password" name="upass" required>
 
-        <button type="submit" name="submit">Signup</button>
+        <button type="submit" name="submit" class="submit">Signup</button>
 	    <p>or</p>
 	    <a class="ref" href="index.php">Back to Login Page</a>
 
