@@ -27,6 +27,8 @@
         <input type="password" name="upass" required>
 
         <button type="submit" name="submit">Login</button>
+	    <p>or</p>
+	    <a class="ref" href="signup.php">Signup</a>
 
     </form>
 
