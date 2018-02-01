@@ -47,11 +47,11 @@
           sqlsrv_free_stmt($result);
 		  
 		  
-           $sql1 = "SELECT MAX(ID) FROM users";
+           $sql1 = "SELECT MAX(ID) AS max FROM users";
 	   $result1 = sqlsrv_query($conn, $sql1);
 	   while ($row = sqlsrv_fetch_array($result1, SQLSRV_FETCH_ASSOC)) {
-		 echo ($row[0] . " " . PHP_EOL);
-		   $id = $row[0];
+		 echo ($row['max'] . " " . PHP_EOL);
+		   $id = $row['max'];
 	   }
 		  
 		  
