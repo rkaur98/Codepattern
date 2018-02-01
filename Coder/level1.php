@@ -128,10 +128,9 @@ REQUIRED to write at end : result.innerHTML = y;
 		
 	<?php
 	 
-		echo $id;
 		if(isset($_POST['submit']))
 		      {
-			  $sql = "UPDATE levels SET level1 = 'true' WHERE ID = ".$id."";
+		$sql = "UPDATE levels SET level1 = 'true' WHERE ID = "?><p id='p'></p> <script> a = window.location.hash.substring(1); console.log(a); document.getElementById('p').value = a; </script>"";
 			  $result = sqlsrv_query($conn, $sql);
 			  if ($result == FALSE)
 			  echo (sqlsrv_errors());
