@@ -23,12 +23,12 @@
 	<main class="index">
     <form action="" method="post">
 
-        <input type="text" name="uname" required>
-        <input type="password" name="upass" required>
+        <input type="text" name="uname" placeholder=" username" required>
+        <input type="password" name="upass" placeholder=" password" required>
 
-        <button type="submit" name="submit">Login</button>
+        <button type="submit" name="submit" class="submit">Login</button>
 	    <p>or</p>
-	    <a class="ref" href="signup.php">Signup</a>
+	    <a href="signup.php">Signup</a>
 
     </form>
 
@@ -36,12 +36,10 @@
 	  if(isset($_POST['submit']))
       {
           $sql = "SELECT * FROM users WHERE username = '".$_POST["uname"]."' AND upassword = '".$_POST["upass"]."' ";
-
           $result = sqlsrv_query($conn, $sql);
           if ($result == FALSE)
           echo (sqlsrv_errors());
 		  
-
           while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
 //            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
 		if ($row > 0)
@@ -57,8 +55,6 @@
 	  
           sqlsrv_free_stmt($result);
      
-
-
         }
 	    ?>
 
