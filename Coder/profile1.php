@@ -44,16 +44,10 @@
 	    ?>
 	    </h2>
 		
-	<form action="level1.php" method="post">
-
-        	<input type="text" name="uid" id="uid" class="hide" value="<?php echo $_POST["uid"]; ?>">
+	
 	    
-        	<button type="submit" name="submit" class="ref">Level1</button>
-	 
-    	</form>
-	    
-	    <a class="ref" href="level1.php?<?php echo $id ?>">Level1</a>
-	    <a class="ref" href="level2.php">Level2</a>
+	    <a class="ref" href="level1.php?uid=<?php echo $id ?>">Level1</a>
+	    <a class="ref" href="level2.php?uid=<?php echo $id ?>">Level2</a>
 
 	</main>
 	</div>
