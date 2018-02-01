@@ -43,7 +43,7 @@
 		  
 
           while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-           echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
+//            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
 		if ($row > 0)
 		{
 		$sub = $row['username'];
@@ -54,6 +54,10 @@
 		echo("<P>Error adding your details at this time.</P>" . sqlsrv_errors());
 		}
           }
+	  
+	   if(sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC) < 0){
+		   echo("<P>Either username does not exist or password is incorrect</P>" . sqlsrv_errors());
+	   }
           sqlsrv_free_stmt($result);
      
 
