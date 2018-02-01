@@ -94,7 +94,7 @@ REQUIRED to write at end : result.innerHTML = y;
 		    let d1 = document.getElementById("run1").childNodes;
 		    let d2 = document.getElementById("result").childNodes;
 
-	document.getElementById("output").innerHTML = "<h4>Matching : " + d1[0].isEqualNode(d2[0])+"</h4><form action="" method="post"> <button type="submit" name="submit" class="ref">Done</button></form>";
+	document.getElementById("output").innerHTML = '<h4>Matching : ' + d1[0].isEqualNode(d2[0])+'</h4><form action="" method="post"> <button type="submit" name="submit" class="ref">Done</button></form>';
 		} 
 		
 		
