@@ -13,6 +13,7 @@
 	</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<h1>Level 1</h1>
@@ -130,7 +131,7 @@ REQUIRED to write at end : result.innerHTML = y;
 	 
 		if(isset($_POST['submit']))
 		      {
-		$sql = "UPDATE levels SET level1 = 'true' WHERE ID = "?><p id='p'></p> <script> a = window.location.hash.substring(1); console.log(a); document.getElementById('p').value = a; </script>"";
+		$sql = "UPDATE levels SET level1 = 'true' WHERE ID = ".$_GET["uid"]." ";
 			  $result = sqlsrv_query($conn, $sql);
 			  if ($result == FALSE)
 			  echo (sqlsrv_errors());
