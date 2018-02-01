@@ -39,7 +39,9 @@
 
           $result = sqlsrv_query($conn, $sql);
           if ($result == FALSE)
-          echo (sqlsrv_errors());
+          echo (sqlsrv_errors())
+	  else
+	  header("Location: signup.php");
           
           while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
