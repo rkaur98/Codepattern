@@ -27,8 +27,20 @@
     <script>
       a = window.location.hash.substring(1);
       console.log(a);
+	    document.getElementById('uid').innerHTML = a;
     </script>  
 	<?php
+	  sql = "SELECT * FROM users WHERE ID = ?><p id='uid'></p><?php ";
+          $result = sqlsrv_query($conn, $sql);
+          if ($result == FALSE)
+          echo (sqlsrv_errors());
+		  
+          while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
+           echo ($row['username'] . PHP_EOL);
+		
+          }
+	  
+          sqlsrv_free_stmt($result);
     
 	 ?>
 
