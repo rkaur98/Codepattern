@@ -41,7 +41,7 @@
           if ($result == FALSE)
           echo (sqlsrv_errors());
 		  
- 	  	if (sqlsrv_query($conn, $sql))
+ 	  	if (sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC) > 0)
 		{
 		header("Location: signup.php");
 		exit;
