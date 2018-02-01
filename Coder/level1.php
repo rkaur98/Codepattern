@@ -127,7 +127,7 @@ REQUIRED to write at end : result.innerHTML = y;
 	</script>
 		
 	<?php
-	 
+	 echo ($_POST["uid"]);
           $sql = "SELECT * FROM users WHERE ID = ".$_POST["uid"]." ";
           $result = sqlsrv_query($conn, $sql);
           if ($result == FALSE)
