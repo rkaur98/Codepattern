@@ -144,17 +144,15 @@ REQUIRED to write at end : result.innerHTML = y;
 			$sql = "UPDATE levels SET level1 = 'true' WHERE ID = ".$_GET["uid"]." ";
 			
 			  $result = sqlsrv_query($conn, $sql);
-			echo($result);
-			  if ($result == FALSE);
-// 			  echo (sqlsrv_errors());
+			  if ($result == FALSE)
+			  echo (sqlsrv_errors());
 
 			  while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-// 		           echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
+		//            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
 				
 			  }
 
 			  sqlsrv_free_stmt($result);
-
 			}
 		?>
 	
