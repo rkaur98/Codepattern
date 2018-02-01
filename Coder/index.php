@@ -38,10 +38,14 @@
           $sql = "SELECT * FROM users WHERE username = '".$_POST["uname"]."' AND upassword = '".$_POST["upass"]."' ";
 
           $result = sqlsrv_query($conn, $sql);
-          if ($result == FALSE)
+          if ($result == FALSE){
           echo (sqlsrv_errors())
-	  else
-	  header("Location: signup.php");
+	  }
+	  else{
+		header("Location:/signup.php");
+  		exit();
+	  }
+	  
           
           while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
