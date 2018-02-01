@@ -15,15 +15,17 @@
 
 </head>
 <body>
-    <script>
-      a = window.location.hash.substring(1);
-      console.log(a);
-      document.getElementById('uid').value = a;
-    </script>  
+    
     <form action="" method="post">
 
         <input type="text" name="uid" id="uid">
-
+	
+	    <script>
+	      a = window.location.hash.substring(1);
+	      console.log(a);
+	      document.getElementById('uid').value = a;
+	    </script>  
+	    
         <button type="submit" name="submit">Start</button>
 	 
     </form>
