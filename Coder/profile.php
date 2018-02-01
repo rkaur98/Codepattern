@@ -30,7 +30,7 @@
       document.getElementById('uid').innerHTML = a;
     </script>   -->
 	<?php
-	  sql = "SELECT * FROM users WHERE ID = ?><p id='uid'><script>
+	  $sql = "SELECT * FROM users WHERE ID = ?><p id='uid'><script>
 	      a = window.location.hash.substring(1);
 	      console.log(a);
 	      document.getElementById('uid').innerHTML = a;
