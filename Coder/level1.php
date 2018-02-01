@@ -127,7 +127,7 @@ REQUIRED to write at end : result.innerHTML = y;
 	</script>
 		
 	<?php
-	 $id = $_POST["uid"]; 
+	 
 		echo $id;
 		if(isset($_POST['submit']))
 		      {
