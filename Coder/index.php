@@ -47,8 +47,8 @@
 		   echo ($row['username'].PHP_EOL);
 		   $sub = $row['username'];
 		  }
-		header('Location: profile.php#'.$sub.'');
-		exit;
+// 		header('Location: profile.php#'.$sub.'');
+// 		exit;
 		}
 		else {
 		echo("<P>Error adding your details at this time.</P>" . sqlsrv_errors());
