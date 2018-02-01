@@ -10,15 +10,25 @@
 	<?php
     include_once 'connect.php';
     ?>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
+	<script>
+		jQuery(document).ready(function($){
+
+		$( ".start" ).click(function() {
+			$(this).parent().toggleClass("hide");
+			$(this).parent().next().toggleClass("hide");
+		});
+    	
+		});
+	</script>
     
     <form action="" method="post">
 
-        <input type="text" name="uid" id="uid">
+        <input type="text" name="uid" id="uid" class="hide">
 	
 	    <script>
 	      a = window.location.hash.substring(1);
@@ -26,9 +36,10 @@
 	      document.getElementById('uid').value = a;
 	    </script>  
 	    
-        <button type="submit" name="submit">Start</button>
+        <button type="submit" name="submit" class="start">Start</button>
 	 
     </form>
+	<div id="container" class="hide">
 	<header>
 		<h1>Code Pattern</h1>
 	</header>
@@ -57,6 +68,7 @@
         }
 	    ?>
 	</main>
+	</div>
 
 </body>
 </html>
