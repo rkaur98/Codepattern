@@ -50,8 +50,8 @@
            $sql1 = "SELECT MAX(ID) FROM users";
 	   $result1 = sqlsrv_query($conn, $sql1);
 	   while ($row = sqlsrv_fetch_array($result1, SQLSRV_FETCH_ASSOC)) {
-		 echo ($row['ID'] . " " . PHP_EOL);
-		   $id = $row['ID'];
+		 echo ($row[0] . " " . PHP_EOL);
+		   $id = $row[0];
 	   }
 		  
 		  
