@@ -41,18 +41,18 @@
           if ($result == FALSE)
           echo (sqlsrv_errors());
 		  
- 	  	if (sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC) > 0)
-		{
-		while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-		   echo ($row['username'].PHP_EOL);
-		   $sub = $row['username'];
-		  }
-// 		header('Location: profile.php#'.$sub.'');
-// 		exit;
-		}
-		else {
-		echo("<P>Error adding your details at this time.</P>" . sqlsrv_errors());
-		}
+//  	  	if (sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC) > 0)
+// 		{
+// 		while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
+// 		   echo ($row['username'].PHP_EOL);
+// 		   $sub = $row['username'];
+// 		  }
+// // 		header('Location: profile.php#'.$sub.'');
+// // 		exit;
+// 		}
+// 		else {
+// 		echo("<P>Error adding your details at this time.</P>" . sqlsrv_errors());
+// 		}
 
           while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
