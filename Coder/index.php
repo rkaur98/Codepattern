@@ -33,7 +33,7 @@
 	<?php
 	  if(isset($_POST['submit']))
       {
-          $sql = "SELECT ID FROM users WHERE username = '".$_POST["uname"]."' AND upassword = '".$_POST["upass"]."' ";
+          $sql = "SELECT * FROM users WHERE username = '".$_POST["uname"]."' AND upassword = '".$_POST["upass"]."' ";
 
           $result = sqlsrv_query($conn, $sql);
           if ($result == FALSE)
