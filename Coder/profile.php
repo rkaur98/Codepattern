@@ -26,7 +26,7 @@
 		});
 	</script>
     
-    <form action="" method="post">
+    <form action="profile1.php" method="post">
 
         <input type="text" name="uid" id="uid" class="hide">
 	
