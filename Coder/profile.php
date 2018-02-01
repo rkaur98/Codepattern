@@ -30,7 +30,7 @@
       document.getElementById('uid').innerHTML = a;
     </script>   -->
 	<?php
-	  $sql = "SELECT * FROM users WHERE ID = ?><p id='uid'>1</p><?php ";
+	  $sql = "SELECT * FROM users WHERE ID = "?><p id='uid'>1</p><?php" ";
           $result = sqlsrv_query($conn, $sql);
           if ($result == FALSE)
           echo (sqlsrv_errors());
