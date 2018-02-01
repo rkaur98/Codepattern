@@ -45,7 +45,7 @@
 		{
 		$row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
 		$sub = $row['username'];
-		header('Location: signup.php#".$sub."');
+		header('Location: signup.php#'.$sub);
 		exit;
 		}
 		else {
