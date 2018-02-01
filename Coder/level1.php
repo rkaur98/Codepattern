@@ -142,9 +142,10 @@ REQUIRED to write at end : result.innerHTML = y;
 		      {
 			
 			$sql = "UPDATE levels SET level1 = 'true' WHERE ID = ".$_GET["uid"]." ";
-			echo($sql);
+			
 			  $result = sqlsrv_query($conn, $sql);
-			  if ($result == FALSE)
+			echo($result);
+			  if ($result == FALSE);
 // 			  echo (sqlsrv_errors());
 
 			  while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
