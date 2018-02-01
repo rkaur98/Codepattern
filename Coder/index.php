@@ -55,9 +55,6 @@
 		}
           }
 	  
-	   if(sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC) < 0){
-		   echo("<P>Either username does not exist or password is incorrect</P>" . sqlsrv_errors());
-	   }
           sqlsrv_free_stmt($result);
      
 
