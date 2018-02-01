@@ -27,7 +27,7 @@
     
     <h2>Welcome 
 		<?php
-	 
+	 $id = $_POST["uid"];
           $sql = "SELECT * FROM users WHERE ID = ".$_POST["uid"]." ";
           $result = sqlsrv_query($conn, $sql);
           if ($result == FALSE)
@@ -52,7 +52,7 @@
 	 
     	</form>
 	    
-	    <a class="ref" href="level1.php">Level1</a>
+	    <a class="ref" href="level1.php?<?php echo $id ?>">Level1</a>
 	    <a class="ref" href="level2.php">Level2</a>
 
 	</main>
