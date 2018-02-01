@@ -24,13 +24,17 @@
     <a class="ref" href="level1.php">Level1</a>
     <a class="ref" href="level2.php">Level2</a>
     
-    <script>
+<!--     <script>
       a = window.location.hash.substring(1);
       console.log(a);
-	    document.getElementById('uid').innerHTML = a;
-    </script>  
+      document.getElementById('uid').innerHTML = a;
+    </script>   -->
 	<?php
-	  sql = "SELECT * FROM users WHERE ID = ?><p id='uid'></p><?php ";
+	  sql = "SELECT * FROM users WHERE ID = ?><p id='uid'><script>
+	      a = window.location.hash.substring(1);
+	      console.log(a);
+	      document.getElementById('uid').innerHTML = a;
+	    </script> </p><?php ";
           $result = sqlsrv_query($conn, $sql);
           if ($result == FALSE)
           echo (sqlsrv_errors());
