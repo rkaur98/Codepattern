@@ -22,12 +22,11 @@
 	</header>
 
 	<main class="index">
-	    <a class="ref" href="level1.php">Level1</a>
-	    <a class="ref" href="level2.php">Level2</a>
+	    
 		
     
-    
-	<?php
+    <h2>Welcome 
+		<?php
 	 
           $sql = "SELECT * FROM users WHERE ID = ".$_POST["uid"]." ";
           $result = sqlsrv_query($conn, $sql);
@@ -43,6 +42,11 @@
      
         
 	    ?>
+	    </h2>
+	    
+	    <a class="ref" href="level1.php">Level1</a>
+	    <a class="ref" href="level2.php">Level2</a>
+
 	</main>
 	</div>
 
