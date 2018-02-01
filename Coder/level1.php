@@ -94,7 +94,7 @@ REQUIRED to write at end : result.innerHTML = y;
 		    let d1 = document.getElementById("run1").childNodes;
 		    let d2 = document.getElementById("result").childNodes;
 
-			document.getElementById("output").innerHTML = "<h4>Matching : " + d1[0].isEqualNode(d2[0])+"</h4>";
+	document.getElementById("output").innerHTML = "<h4>Matching : " + d1[0].isEqualNode(d2[0])+"</h4><form action="" method="post"> <button type="submit" name="submit" class="ref">Done</button></form>";
 		} 
 		
 		
@@ -127,22 +127,24 @@ REQUIRED to write at end : result.innerHTML = y;
 	</script>
 		
 	<?php
-	 echo ($_POST["uid"]); ?>
-	<?php
-          $sql = "SELECT * FROM users WHERE ID = ".$_POST["uid"]." ";
-          $result = sqlsrv_query($conn, $sql);
-          if ($result == FALSE)
-          echo (sqlsrv_errors());
-		  
-          while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-           echo ($row['username'] . PHP_EOL);
-		
-          }
-	  
-          sqlsrv_free_stmt($result);
-     
-        
-	  ?>
+	 echo ($_POST["uid"]); 
+		if(isset($_POST['submit']))
+		      {
+			  $sql = "UPDATE levels SET level1 = 'true' WHERE ID = ".$_POST["uid"]."";
+			  $result = sqlsrv_query($conn, $sql);
+			  if ($result == FALSE)
+			  echo (sqlsrv_errors());
+
+			  while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
+		//            echo ($row['username'] . " " . $row['upassword'] . PHP_EOL);
+				
+			  }
+
+			  sqlsrv_free_stmt($result);
+
+			}
+		?>
+	
 
 </body>
 </html>
