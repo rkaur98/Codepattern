@@ -15,26 +15,50 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-
+	<h1>Level 1</h1>
+	<h3>Expected Result:</h3>
 	<div id="run1">
 			
 	</div>
 
 	<div id="pattern" class="pattern">
-		<textarea rows="20" cols="50" id="patt">
+		<textarea rows="20" cols="60" id="patt">
+// write code here ...
 
-        </textarea>
+</textarea>
 
-		<button id="btn">Submit</button>
+<textarea rows="20" cols="60">
+Hint:
+
+Try to form Table element.
+var y = '<table>'
+
+
+// Include for loop.
+// Add code to be printed in var y (eg: y+="*" or y+="<tr>") 
+
+// Include '<tr></tr>' to form row
+// Include '<td></td>' to form column
+// Close table element
+
+REQUIRED to write at end : result.innerHTML = y;
+	</textarea>
 
 		
-		<div id="scriptContainer">
-			
-		</div>
+	</div>
 
-		<div id="result">
+	<button id="btn">Submit</button>
+
+	<div id="scriptContainer">
 			
-		</div>
+	</div>
+	<h3>Actual Result:</h3>
+	<div id="result">
+			
+	</div>
+
+	<div id="output">
+		
 	</div>
 
 	<script>
@@ -45,9 +69,12 @@
 		    // var run2 = document.getElementById('run2');
 
 		$("#btn").click(function (){
+			var r = document.getElementById('result');
+
 			run();
 
 		function run() {
+			r.innerHTML = " ";
 		    var inp = document.getElementById('patt');
 		    var scriptText = inp.value;
 		    var oldScript = document.getElementById('scriptContainer');
@@ -63,9 +90,11 @@
 		    newScript.text = x + ' ' + inp.value;
 		    document.body.appendChild(newScript);
 		    
-		    // x.id = 'result';
-		    // x.text = '';
-		    // document.getElementById('scriptContainer').append(x);
+		    let divList  = document.getElementsByTagName("div");
+		    let d1 = document.getElementById("run1").childNodes;
+		    let d2 = document.getElementById("result").childNodes;
+
+			document.getElementById("output").innerHTML = "<h4>Matching : " + d1[0].isEqualNode(d2[0])+"</h4>";
 		} 
 		
 		
