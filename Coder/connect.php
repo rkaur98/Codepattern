@@ -1,9 +1,9 @@
 <?php
-$serverName = "codepattern.database.windows.net";
+$serverName = "{server name}";
 $connectionOptions = array(
-    "Database" => "CodePattern",
-    "Uid" => "rupkaur98",
-    "PWD" => "gur@6507$"
+    "Database" => "",
+    "Uid" => "",
+    "PWD" => ""
 );
 //Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
